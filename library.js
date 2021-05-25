@@ -1,20 +1,20 @@
 (function (module) {
   "use strict";
 
-  var User = module.parent.require("./user"),
-    Groups = module.parent.require("./groups"),
-    db = module.parent.require("../src/database"),
-    passport = module.parent.require("passport"),
-    winston = module.parent.require("winston"),
-    async = module.parent.require("async"),
+  var User = require.main.require("./user"),
+    Groups = require.main.require("./groups"),
+    db = require.main.require("../src/database"),
+    passport = require.main.require("passport"),
+    winston = require.main.require("winston"),
+    async = require.main.require("async"),
     controllers = require("./lib/controllers"),
     format = require("util").format,
-    SocketAdmin = module.parent.require("./socket.io/admin"),
-    Settings = module.parent.require("./settings"),
-    Strategy = require("passport-keycloak"),
-    nconf = module.parent.require("nconf");
+    SocketAdmin = require.main.require("./socket.io/admin"),
+    Settings = require.main.require("./settings"),
+    Strategy = require("./lib/passport-keycloak"),
+    nconf = require.main.require("nconf");
 
-  var authenticationController = module.parent.require(
+  var authenticationController = require.main.require(
     "./controllers/authentication"
   );
 

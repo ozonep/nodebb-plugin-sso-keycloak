@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-sso-keycloak",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "NodeBB Keycloak SSO",
   "main": "library.js",
   "keywords": [
@@ -14,13 +14,14 @@
   ],
   "author": {
     "name": "Rickard Östergård",
-    "email": ""
+    "email": "ivan@diggit.io"
   },
   "license": "MIT",
   "readme": "",
   "readmeFilename": "README.md",
   "dependencies": {
-    "passport-keycloak": "rckrdstrgrd/passport-keycloak#a4011cbb8fd92c7357078448c218d93eee0e78d0"
+    "keycloak-connect": "^13.0.0",
+    "uuid": "^8.3.2"
   },
   "nbbpm": {
     "compatibility": "^1.0.1",
